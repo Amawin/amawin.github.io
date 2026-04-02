@@ -23,18 +23,27 @@ var x = setInterval(function() {
     }
 }, 1000);
 
-// 2. News Slider Logic (අලුත් එක)
-let currentNews = 0;
-function startNewsSlider() {
+// News Slider Controller
+let currentNewsIdx = 0;
+
+function rotateNewsSlider() {
     const slides = document.querySelectorAll('.news-slide');
     if (slides.length > 0) {
-        slides.forEach(s => s.classList.remove('active')); // ඔක්කොම slide හංගනවා
-        currentNews++;
-        if (currentNews > slides.length) { currentNews = 1; }
-        slides[currentNews - 1].classList.add('active'); // පෙන්වන්න ඕන එක විතරක් පෙන්වනවා
-        setTimeout(startNewsSlider, 5000); // තත්පර 5න් 5ට
+        // Hide all slides
+        slides.forEach(s => s.classList.remove('active'));
+        
+        // Increment and show next slide
+        currentNewsIdx++;
+        if (currentNewsIdx > slides.length) { 
+            currentNewsIdx = 1; 
+        }
+        
+        slides[currentNewsIdx - 1].classList.add('active');
+        
+        // Repeat every 5 seconds
+        setTimeout(rotateNewsSlider, 5000);
     }
 }
 
-// සයිට් එක සම්පූර්ණයෙන් load වුණාම slider එක පටන් ගන්න
-window.onload = startNewsSlider;
+// Start slider when window loads
+window.addEventListener('load', rotateNewsSlider);
