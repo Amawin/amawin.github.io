@@ -242,5 +242,40 @@ audio {
     font-weight: bold;
     text-transform: uppercase;
 }
+#countdown-container {
+    text-align: center;
+    margin: 40px auto;
+    padding: 20px;
+    background: rgba(0, 0, 0, 0.5);
+    border-radius: 15px;
+    max-width: 600px;
+    border: 1px solid rgba(255, 255, 0, 0.2);
+    backdrop-filter: blur(10px);
+}
+
+#timer {
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 2.5rem;
+    color: #ffff00; /* කහ පාට */
+    font-weight: bold;
+    text-shadow: 0 0 15px rgba(255, 255, 0, 0.7); /* Glow effect */
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+#timer span:nth-child(even) {
+    font-size: 1rem;
+    color: #fff;
+    align-self: flex-end;
+    margin-bottom: 10px;
+}
+
+#countdown-container h3 {
+    color: #fff;
+    letter-spacing: 5px;
+    margin-bottom: 15px;
+    font-size: 0.9rem;
+}
         
     </style>
