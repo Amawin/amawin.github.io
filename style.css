@@ -283,5 +283,47 @@ audio {
     margin-bottom: 15px;
     font-size: 0.9rem;
 }
+/* Sidebar Slider styling */
+.sidebar-news {
+    position: relative;
+    overflow: hidden;
+    min-height: 420px; /* පෙට්ටිය එකම සයිස් එකේ තියන්න */
+}
+
+.news-slide {
+    display: none;
+    animation: fadeInNews 0.8s ease-in-out;
+}
+
+.news-slide.active {
+    display: block;
+}
+
+/* AKFU එකට දාන image placeholder එකේ style එක */
+.news-img-placeholder {
+    width: 100%;
+    height: 180px;
+    background: linear-gradient(45deg, #111, #222);
+    border: 1px dashed #444;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #444;
+    font-weight: bold;
+    border-radius: 5px;
+    margin: 10px 0;
+}
+
+/* Animation */
+@keyframes fadeInNews {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.sidebar-news img {
+    max-width: 100%;
+    border-radius: 5px;
+    margin-top: 10px;
+}
         
     </style>
