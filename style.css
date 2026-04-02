@@ -283,7 +283,7 @@ audio {
     margin-bottom: 15px;
     font-size: 0.9rem;
 }
-/* Sidebar News Layout */
+/* Sidebar News Layout - FIXED HEIGHT to prevent resizing */
 .sidebar-news {
     width: 100%;
     max-width: 350px;
@@ -291,74 +291,70 @@ audio {
     border-left: 3px solid #ffff00;
     border-radius: 0 15px 15px 0;
     padding: 20px;
-    min-height: 420px;
+    /* සයිට් එක resize වෙන එක නවත්තන්න මෙන්න මේ උස පාවිච්චි කරනවා */
+    min-height: 480px; 
+    display: flex;
+    flex-direction: column;
     backdrop-filter: blur(5px);
     margin-bottom: 30px;
+    overflow: hidden;
 }
 
-/* Slide Visibility & Animation */
+/* Slide Visibility */
 .news-slide {
     display: none;
-    animation: fadeInNews 0.8s ease-in-out;
+    animation: fadeInNews 0.5s ease-in-out;
 }
 
 .news-slide.active {
     display: block;
 }
 
-@keyframes fadeInNews {
-    from { opacity: 0; transform: translateY(10px); }
-    to { opacity: 1; transform: translateY(0); }
+/* Link Style - Blue color එක අයින් කරලා Kaha pata කරන්න */
+.news-link {
+    color: #ffff00 !important; /* Amawin Yellow */
+    font-size: 0.9rem;
+    font-weight: 900; /* Extra Bold */
+    display: block;
+    margin-top: 15px;
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: 0.3s;
 }
 
-/* Typography & Elements */
-.news-label {
-    background: #ffff00;
-    color: #000;
-    padding: 2px 8px;
-    font-size: 10px;
-    font-weight: 900;
-    display: inline-block;
-    border-radius: 3px;
+.news-link:hover {
+    text-shadow: 0 0 10px rgba(255, 255, 0, 0.8);
+    transform: translateX(5px);
 }
 
-.news-title {
-    color: #fff;
-    font-size: 1.25rem;
-    margin: 15px 0 10px;
-    font-weight: bold;
-}
-
-.news-text {
-    font-size: 0.85rem;
-    color: #888;
-    line-height: 1.5;
-}
-
-.news-image {
-    width: 100%;
-    border-radius: 8px;
-    margin: 10px 0;
-}
-
+/* Placeholder for AKFU to match Durga image size */
 .news-img-placeholder {
     width: 100%;
-    height: 180px;
-    background: #111;
+    height: 250px; /* Durga image එකේ size එකට සමාන උසක් */
+    background: linear-gradient(45deg, #0a0a0a, #1a1a1a);
     border: 1px dashed #444;
     display: flex;
     align-items: center;
     justify-content: center;
-    color: #444;
+    color: #555;
+    font-weight: bold;
     border-radius: 8px;
+    margin: 10px 0;
 }
 
-.news-link {
-    color: #d4af37;
-    font-size: 0.8rem;
-    font-weight: bold;
-    display: block;
-    margin-top: 15px;
-    text-decoration: none;
-}  
+/* Durga Image size */
+.news-image {
+    width: 100%;
+    height: auto;
+    max-height: 250px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin: 10px 0;
+}
+
+@keyframes fadeInNews {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
     </style>
