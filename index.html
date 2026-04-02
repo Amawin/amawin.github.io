@@ -28,15 +28,28 @@
             </div>
         </div>
 
-        <div class="sidebar-news">
+       <div class="sidebar-news">
+    <div id="news-slider">
+        
+        <div class="news-slide active">
+            <div class="news-label">BREAKING NEWS</div>
+            <div class="news-title">AMAWIN x AKFU</div>
+            <div class="news-img-placeholder">AKFU x AMAWIN</div> 
+            <p style="font-size: 0.85rem; color: #888; margin-top: 10px;">
+                Amawin officially signed to AKFU to create a new journey in Sri Lankan cinema with "Nuravi".
+            </p>
+        </div>
+
+        <div class="news-slide">
             <div class="news-label">LATEST NEWS</div>
             <div class="news-title">DURGA Releasing April 3rd</div>
             <img src="Durga Artwork.png" alt="DURGA">
             <p style="font-size: 0.85rem; color: #888;">Friday at 6:00 PM. Get ready for a new era of Sri Lankan Trap.</p>
             <a href="https://linktr.ee/AmawinMusic" style="color: #d4af37; font-size: 0.8rem; font-weight: bold; display: block; margin-top: 15px;">PRE-SAVE NOW →</a>
         </div>
-    </div>
 
+    </div>
+</div>
     <div id="countdown-container">
     <h3>DURGA RELEASING IN</h3>
     <div id="timer">
@@ -94,32 +107,6 @@
 </div>
     <footer>© 2026 Amawin | All Rights Reserved.</footer>
 </div>
-<script>
-    // DURGA Release Date & Time: April 3, 2026 at 6:00 PM
-var countDownDate = new Date("April 3, 2026 18:00:00").getTime();
-
-    var x = setInterval(function() {
-        var now = new Date().getTime();
-        var distance = countDownDate - now;
-
-        // දවස්, පැය, මිනිත්තු, තත්පර ගණනය කිරීම
-        var days = Math.floor(distance / (1000 * 60 * 60 * 24));
-        var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-        var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-        var seconds = Math.floor((distance % (1000 * 60)) / 1000);
-
-        // HTML එකට දත්ත යැවීම
-        document.getElementById("days").innerHTML = days;
-        document.getElementById("hours").innerHTML = hours;
-        document.getElementById("minutes").innerHTML = minutes;
-        document.getElementById("seconds").innerHTML = seconds;
-
-        // වෙලාව ඉවර වුණාම පෙන්වන මැසේජ් එක
-        if (distance < 0) {
-            clearInterval(x);
-            document.getElementById("countdown-container").innerHTML = "<h3>DURGA IS OUT NOW!</h3>";
-        }
-    }, 1000);
-</script>
+<script src="script.js"></script>
 </body>
 </html>
