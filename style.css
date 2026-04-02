@@ -244,24 +244,30 @@ audio {
 }
 #countdown-container {
     text-align: center;
-    margin: 40px auto;
-    padding: 20px;
-    background: rgba(0, 0, 0, 0.5);
-    border-radius: 15px;
-    max-width: 600px;
-    border: 1px solid rgba(255, 255, 0, 0.2);
-    backdrop-filter: blur(10px);
+    margin: 40px auto; /* මේකෙන් තමයි මුළු පෙට්ටියම මැදට එන්නේ */
+    padding: 30px;
+    background: rgba(0, 0, 0, 0.7);
+    border-radius: 20px;
+    max-width: 500px; /* පෙට්ටියේ පළල */
+    border: 2px solid rgba(255, 255, 0, 0.3);
+    backdrop-filter: blur(15px);
+    display: flex;
+    flex-direction: column; /* අකුරුයි අංකයි එක යට එක එන්න */
+    align-items: center; /* හරියටම මැදට ගන්න */
+    justify-content: center;
 }
 
 #timer {
     font-family: 'Courier New', Courier, monospace;
-    font-size: 2.5rem;
-    color: #ffff00; /* කහ පාට */
+    font-size: 3rem; /* අංක ටික තව ටිකක් ලොකු කරා */
+    color: #ffff00;
     font-weight: bold;
-    text-shadow: 0 0 15px rgba(255, 255, 0, 0.7); /* Glow effect */
+    text-shadow: 0 0 20px rgba(255, 255, 0, 0.8);
     display: flex;
-    justify-content: center;
-    gap: 15px;
+    justify-content: center; /* අංක ටික මැදට කරනවා */
+    align-items: baseline;
+    gap: 10px;
+    margin-top: 10px;
 }
 
 #timer span:nth-child(even) {
