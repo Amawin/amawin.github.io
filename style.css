@@ -37,26 +37,31 @@
             margin-top: 40px;
         }
 
-        /* Bio */
-        .about-section h2 {
-            font-size: 1.2rem;
-            letter-spacing: 3px;
-            color: #d4af37;
-            margin-bottom: 20px;
-            text-transform: uppercase;
-        }
+       /* Bio Section Updated */
+.about-section h2 {
+    font-size: 1.2rem;
+    letter-spacing: 3px;
+    color: #d4af37;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    text-align: center; /* Heading එක මැදට ගන්න */
+}
 
-        .bio-content {
-            background: rgba(255, 255, 255, 0.02);
-            padding: 30px;
-            border: 1px solid rgba(255, 255, 255, 0.05);
-            text-align: justify;
-            color: #aaa;
-            font-size: 0.95rem;
-        }
-        .bio-content p { margin-bottom: 15px; }
+.bio-content {
+    background: rgba(255, 255, 255, 0.02);
+    padding: 30px;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    text-align: center; /* අකුරු සේරම මැදට ගන්න */
+    color: #aaa;
+    font-size: 0.95rem;
+    max-width: 800px; /* ගොඩක් පළල වෙලා අකුරු විහිදෙන එක නවත්තන්න */
+    margin: 0 auto; /* මුළු box එකම පේජ් එකේ මැදට ගන්න */
+}
 
-  
+.bio-content p { 
+    margin-bottom: 15px; 
+    line-height: 1.6; /* කියවන්න ලේසි වෙන්න පොඩි පරතරයක් */
+}
 
         /* Gray Platform Buttons */
         .social-links {
