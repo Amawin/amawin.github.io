@@ -241,48 +241,7 @@ audio {
     margin-top: 10px;
     font-weight: bold;
     text-transform: uppercase;
-}
-#countdown-container {
-    text-align: center;
-    margin: 40px auto; /* මේකෙන් තමයි මුළු පෙට්ටියම මැදට එන්නේ */
-    padding: 30px;
-    background: rgba(0, 0, 0, 0.7);
-    border-radius: 20px;
-    max-width: 500px; /* පෙට්ටියේ පළල */
-    border: 2px solid rgba(255, 255, 0, 0.3);
-    backdrop-filter: blur(15px);
-    display: flex;
-    flex-direction: column; /* අකුරුයි අංකයි එක යට එක එන්න */
-    align-items: center; /* හරියටම මැදට ගන්න */
-    justify-content: center;
-}
 
-#timer {
-    font-family: 'Courier New', Courier, monospace;
-    font-size: 3rem; /* අංක ටික තව ටිකක් ලොකු කරා */
-    color: #ffff00;
-    font-weight: bold;
-    text-shadow: 0 0 20px rgba(255, 255, 0, 0.8);
-    display: flex;
-    justify-content: center; /* අංක ටික මැදට කරනවා */
-    align-items: baseline;
-    gap: 10px;
-    margin-top: 10px;
-}
-
-#timer span:nth-child(even) {
-    font-size: 1rem;
-    color: #fff;
-    align-self: flex-end;
-    margin-bottom: 10px;
-}
-
-#countdown-container h3 {
-    color: #fff;
-    letter-spacing: 5px;
-    margin-bottom: 15px;
-    font-size: 0.9rem;
-}
 /* Sidebar News Layout - FIXED HEIGHT to prevent resizing */
 .sidebar-news {
     width: 100%;
