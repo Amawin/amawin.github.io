@@ -181,42 +181,6 @@
         margin-bottom: 20px;
     }
 }
-.audio-player {
-    background: rgba(0, 0, 0, 0.6);
-    border: 2px solid #333;
-    border-radius: 20px;
-    padding: 20px;
-    text-align: center;
-    max-width: 500px;
-    margin: 30px auto;
-    backdrop-filter: blur(10px);
-    transition: 0.3s;
-}
-
-.audio-player:hover {
-    border-color: #ffff00; /* අර කහ පාට Outline එකම මෙතනටත් එනවා */
-    box-shadow: 0 0 20px rgba(255, 255, 0, 0.2);
-}
-
-.audio-player h3 {
-    color: #fff;
-    letter-spacing: 3px;
-    margin-bottom: 15px;
-    font-family: 'Courier New', Courier, monospace; /* ටිකක් Raw ලුක් එකක් ගන්න */
-}
-
-/* Audio Player එකේ පාට වෙනස් කරන්න (Chrome/Safari) */
-audio {
-    width: 100%;
-    filter: invert(1) hue-rotate(180deg) brightness(1.5); /* මේකෙන් player එක dark වෙනවා */
-}
-
-.audio-player p {
-    color: #ff0000; /* DURGA Red */
-    font-size: 0.8rem;
-    margin-top: 10px;
-    font-weight: bold;
-    text-transform: uppercase;
 
 /* Sidebar News Layout - FIXED HEIGHT to prevent resizing */
 .sidebar-news {
