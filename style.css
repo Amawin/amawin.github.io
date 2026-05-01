@@ -1,35 +1,41 @@
 * { margin: 0; padding: 0; box-sizing: border-box; }
 
 body {
-    background-color: #050505; /* Black/Charcoal palette */
+    background-color: #050505;
     color: #e0e0e0;
     font-family: 'Inter', sans-serif;
     line-height: 1.6;
     display: flex;
     justify-content: center;
-    padding: 40px 20px;
+    padding: 60px 20px;
 }
 
 .container {
-    max-width: 650px; /* Minimal width for focus */
+    max-width: 650px;
     width: 100%;
 }
 
-section { margin-bottom: 60px; }
+section { margin-bottom: 50px; }
 
-h1 { font-size: 2rem; font-weight: 600; margin-bottom: 10px; color: #fff; }
-h2 { font-size: 1.2rem; text-transform: uppercase; letter-spacing: 2px; margin-bottom: 20px; color: #888; }
+h1 { font-size: 2.2rem; font-weight: 600; margin-bottom: 20px; color: #fff; }
+h2 { font-size: 1.1rem; text-transform: uppercase; letter-spacing: 3px; margin-bottom: 25px; color: #666; }
 
-#bio p { font-size: 1rem; font-weight: 300; color: #bbb; text-align: justify; }
+#bio p { font-size: 1rem; font-weight: 300; color: #bbb; text-align: left; }
 
-.spotify-grid { display: flex; flex-direction: column; gap: 15px; }
-.embed-container { background: #111; border-radius: 12px; overflow: hidden; }
+.spotify-grid { display: flex; flex-direction: column; gap: 20px; }
+.embed-container { background: #111; border-radius: 12px; overflow: hidden; border: 1px solid #1a1a1a; }
 
-.social-links { margin-bottom: 20px; text-align: left; }
-.social-links a { color: #888; font-size: 1.5rem; margin-right: 20px; transition: 0.3s; }
+footer {
+    margin-top: 20px;
+    padding-top: 30px;
+    border-top: 1px solid #111;
+}
+
+.social-links { margin-bottom: 20px; }
+.social-links a { color: #555; font-size: 1.4rem; margin-right: 25px; transition: 0.3s ease; }
 .social-links a:hover { color: #fff; }
 
-.distro { font-size: 0.7rem; color: #555; text-transform: uppercase; letter-spacing: 1px; }
-.distro span { color: #777; }
+.distro { font-size: 0.75rem; color: #444; text-transform: uppercase; letter-spacing: 1px; }
+.distro span { color: #d4af37; font-weight: 600; }
 
-.copyright { font-size: 0.7rem; color: #333; margin-top: 10px; }
+.copyright { font-size: 0.7rem; color: #222; margin-top: 8px; }
