@@ -1,75 +1,43 @@
-  
-   * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+/* About සහ Merch Card සඳහා Frame එක */
+#about, .merch-card {
+    position: relative; /* Frame එක මේ ඇතුළේ පිහිටන්න ඕන නිසා */
+    overflow: hidden;
+    padding: 40px;
+    background: rgba(255, 255, 255, 0.02); /* ඉතා ලා පසුබිමක් */
+    border-radius: 15px;
+    z-index: 1;
 }
 
-body {
-    background-color: #050505;
-    color: #fff;
-    font-family: 'Poppins', sans-serif;
-    overflow-x: hidden;
+/* Highlight Frame එක CSS වලින් නිර්මාණය කිරීම */
+#about::before, .merch-card::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border-radius: 15px;
+    padding: 2px; /* Frame එකේ මහත */
+    background: linear-gradient(135deg, rgba(212, 175, 55, 0.2), rgba(255, 255, 255, 0.05)); 
+    -webkit-mask: 
+       linear-gradient(#fff 0 0) content-box, 
+       linear-gradient(#fff 0 0);
+    -webkit-mask-composite: xor;
+            mask-composite: exclude;
+    pointer-events: none; /* Mouse clicks වලට බාධා නොවීමට */
+    opacity: 0.5; /* Opacity එක අඩු කරලා තියෙන්නේ */
+    transition: opacity 0.4s ease;
 }
 
-/* Loader */
-#loader {
-    height: 100vh;
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background: #000;
-    position: fixed;
-    z-index: 9999;
+/* Hover කරද්දී Frame එකේ Opacity එක වැඩි වීම */
+#about:hover::before, .merch-card:hover::before {
+    opacity: 1;
+    background: linear-gradient(135deg, rgba(212, 175, 55, 0.5), rgba(255, 255, 255, 0.2));
 }
 
-#loader h1 {
-    font-size: 3rem;
-    font-weight: 800;
-    letter-spacing: 15px;
-    color: #fff;
-}
-
-/* Sections */
-section {
-    padding: 60px 20px;
-    max-width: 900px;
-    margin: 0 auto;
-    text-align: center;
-}
-
-/* Merch */
-.merch-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 20px;
-}
-
-.merch-card img {
-    width: 100%;
-    border-radius: 8px;
-    border: 1px solid #222;
-}
-
-/* Socials & Footer */
-.social-links {
-    text-align: center;
-    font-size: 2rem;
-    padding: 20px 0;
-}
-
-.social-links a {
-    color: #fff;
-    margin: 0 15px;
-    transition: 0.3s;
-}
-
-.social-links a:hover { color: #d4af37; }
-
-footer {
-    text-align: center;
-    padding: 30px;
-    font-size: 0.8rem;
-    color: #555;
+/* Hover Effect එක තවත් ලස්සන කරන්න */
+#about:hover, .merch-card:hover {
+    box-shadow: 0 0 20px rgba(212, 175, 55, 0.05);
+    transform: scale(1.01);
+    transition: all 0.3s ease;
 }
