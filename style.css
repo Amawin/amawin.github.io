@@ -1,259 +1,87 @@
   
-    <style>
-        * { text-decoration: none !important; margin: 0; padding: 0; box-sizing: border-box; }
-        body {
-            background-color: #050505;
-            color: #eee;
-            font-family: 'Poppins', sans-serif;
-            line-height: 1.6;
-        }
-
-        .container {
-            max-width: 1100px;
-            margin: auto;
-            padding: 40px 20px;
-        }
-
-        header {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding-bottom: 40px;
-            border-bottom: 1px solid #111;
-        }
-
-        .logo {
-            font-size: 1.5rem;
-            font-weight: 800;
-            letter-spacing: 5px;
-            color: #d4af37;
-            text-transform: uppercase;
-        }
-
-        .main-layout {
-            display: grid;
-            grid-template-columns: 1fr 350px;
-            gap: 40px;
-            margin-top: 40px;
-        }
-
-       /* Bio Section Updated */
-.about-section h2 {
-    font-size: 1.2rem;
-    letter-spacing: 3px;
-    color: #d4af37;
-    margin-bottom: 20px;
-    text-transform: uppercase;
-    text-align: center; /* Heading එක මැදට ගන්න */
+   * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-.bio-content {
-    background: rgba(255, 255, 255, 0.02);
-    padding: 30px;
-    border: 1px solid rgba(255, 255, 255, 0.05);
-    text-align: center; /* අකුරු සේරම මැදට ගන්න */
-    color: #aaa;
-    font-size: 0.95rem;
-    max-width: 800px; /* ගොඩක් පළල වෙලා අකුරු විහිදෙන එක නවත්තන්න */
-    margin: 0 auto; /* මුළු box එකම පේජ් එකේ මැදට ගන්න */
+body {
+    background-color: #050505;
+    color: #fff;
+    font-family: 'Poppins', sans-serif;
+    overflow-x: hidden;
 }
 
-.bio-content p { 
-    margin-bottom: 15px; 
-    line-height: 1.6; /* කියවන්න ලේසි වෙන්න පොඩි පරතරයක් */
-}
-
-        /* Gray Platform Buttons */
-        .social-links {
-            display: flex;
-            justify-content: center;
-            gap: 25px;
-            margin-top: 60px;
-            padding: 20px;
-        }
-
-        .social-links a {
-            color: #555; /* Neutral Gray */
-            font-size: 1.5rem;
-            transition: 0.3s ease;
-        }
-
-        .social-links a:hover {
-            color: #d4af37; /* Turns Gold on Hover */
-            transform: translateY(-3px);
-        }
-
-        footer {
-            margin-top: 20px;
-            padding: 20px 0;
-            font-size: 0.7rem;
-            color: #7a7a7a;
-            text-align: center;
-            border-top: 1px solid #111;
-        }
-
-        .join-btn {
-            background-color: #25D366;
-            color: #000;
-            padding: 8px 16px;
-            font-weight: 700;
-            font-size: 0.75rem;
-            border-radius: 4px;
-            text-transform: uppercase;
-        }
-
-        @media (max-width: 850px) {
-            .main-layout { grid-template-columns: 1fr; }
-            .sidebar-news { order: -1; }
-        }
-
-/* Merch Row Layout */
-.merch-row {
-    display: flex;
-    justify-content: space-between; /* දෙපැත්තටම justify කරනවා */
-    gap: 20px; /* කාඩ් දෙක අතර පරතරය */
-    max-width: 900px; /* උඹේ DURGA news එකේ සයිස් එකට අනුව මේක වෙනස් කරපන් */
-    margin: 40px auto; /* මැදට ගන්න */
-    padding: 0 15px;
-}
-
-/* Individual Card Style */
-.merch-card {
-    background: rgba(255, 255, 255, 0.03);
-    border: 1px solid rgba(255, 255, 255, 0.1);
-    border-radius: 12px;
-    width: 48%; /* පේළියට දෙකක් වැටෙන්න */
-    overflow: hidden;
-    transition: 0.3s ease;
-    backdrop-filter: blur(10px);
-}
-
-.merch-card:hover {
-    border-color: #ffff00; /* කහ පාට Outline එක */
-    transform: translateY(-5px); /* පොඩ්ඩක් උඩට එනවා */
-    box-shadow: 0 0 15px rgba(255, 255, 0, 0.3); /* ලාවට කහ පාටින් Glow වෙනවා */
-    transition: 0.3s ease-in-out;
-}
-
-.merch-img {
+/* Loader */
+#loader {
+    height: 100vh;
     width: 100%;
-    height: auto;
-    aspect-ratio: 1/1;
-    object-fit: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #000;
+    position: fixed;
+    z-index: 9999;
 }
 
-.merch-info {
-    padding: 15px;
+#loader h1 {
+    font-size: 3rem;
+    font-weight: 800;
+    letter-spacing: 15px;
+    color: #fff;
+}
+
+/* Sections */
+section {
+    padding: 60px 20px;
+    max-width: 900px;
+    margin: 0 auto;
     text-align: center;
 }
 
-.merch-info h3 {
-    color: #fff;
-    font-size: 1rem;
-    letter-spacing: 1px;
-}
-
-.price {
-    color: #ffff00;
-    font-weight: bold;
-    margin: 10px 0;
-}
-
-.wa-btn {
-    display: block;
-    background: #25d366;
-    color: #fff;
-    padding: 10px;
-    text-decoration: none;
-    border-radius: 6px;
-    font-weight: bold;
-    font-size: 0.9rem;
-}
-
-/* Mobile එකේදී එක යට එක වැටෙන්න */
-@media (max-width: 600px) {
-    .merch-row {
-        flex-direction: column;
-        align-items: center;
-    }
-    .merch-card {
-        width: 100%;
-        margin-bottom: 20px;
-    }
-}
-
-/* Sidebar News Layout - FIXED HEIGHT to prevent resizing */
-.sidebar-news {
-    width: 100%;
-    max-width: 350px;
-    background: rgba(255, 255, 255, 0.03);
-    border-left: 3px solid #ffff00;
-    border-radius: 0 15px 15px 0;
-    padding: 20px;
-    /* සයිට් එක resize වෙන එක නවත්තන්න මෙන්න මේ උස පාවිච්චි කරනවා */
-    min-height: 480px; 
+#hero {
+    height: 80vh;
     display: flex;
-    flex-direction: column;
-    backdrop-filter: blur(5px);
-    margin-bottom: 30px;
-    overflow: hidden;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('https://raw.githubusercontent.com/Amawin/amawin.github.io/main/Amawin2026.png');
+    background-size: cover;
+    background-position: center;
 }
 
-/* Slide Visibility */
-.news-slide {
-    display: none;
-    animation: fadeInNews 0.5s ease-in-out;
+#hero h1 { font-size: 4rem; letter-spacing: 5px; }
+
+/* Merch */
+.merch-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
 }
 
-.news-slide.active {
-    display: block;
+.merch-card img {
+    width: 100%;
+    border-radius: 8px;
+    border: 1px solid #222;
 }
 
-/* Link Style - Blue color එක අයින් කරලා Kaha pata කරන්න */
-.news-link {
-    color: #ffff00 !important; /* Amawin Yellow */
-    font-size: 0.9rem;
-    font-weight: 900; /* Extra Bold */
-    display: block;
-    margin-top: 15px;
-    text-decoration: none;
-    text-transform: uppercase;
-    letter-spacing: 1px;
+/* Socials & Footer */
+.social-links {
+    text-align: center;
+    font-size: 2rem;
+    padding: 20px 0;
+}
+
+.social-links a {
+    color: #fff;
+    margin: 0 15px;
     transition: 0.3s;
 }
 
-.news-link:hover {
-    text-shadow: 0 0 10px rgba(255, 255, 0, 0.8);
-    transform: translateX(5px);
-}
+.social-links a:hover { color: #d4af37; }
 
-/* Placeholder for AKFU to match Durga image size */
-.news-img-placeholder {
-    width: 100%;
-    height: 250px; /* Durga image එකේ size එකට සමාන උසක් */
-    background: linear-gradient(45deg, #0a0a0a, #1a1a1a);
-    border: 1px dashed #444;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+footer {
+    text-align: center;
+    padding: 30px;
+    font-size: 0.8rem;
     color: #555;
-    font-weight: bold;
-    border-radius: 8px;
-    margin: 10px 0;
 }
-
-/* Durga Image size */
-.news-image {
-    width: 100%;
-    height: auto;
-    max-height: 250px;
-    object-fit: cover;
-    border-radius: 8px;
-    margin: 10px 0;
-}
-
-@keyframes fadeInNews {
-    from { opacity: 0; }
-    to { opacity: 1; }
-}
-    </style>
