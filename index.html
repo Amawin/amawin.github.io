@@ -1,17 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <link rel="stylesheet" href="style.css">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Amawin Official Website</title>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <title>Amawin | Official</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
 
-    <!-- Google Search Console Verification -->
+    <!-- Search Console Verification -->
     <meta name="google-site-verification" content="ZYqB_aEmksKWOwLzBCHah3SFDLEFmbhgAZfQD8Y7lho" />
     
-    <!-- Schema Markup for SEO -->
+    <!-- SEO Schema -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
@@ -20,84 +20,58 @@
       "alternateName": "Senithu Amawin",
       "url": "https://amawin.github.io",
       "image": "https://raw.githubusercontent.com/Amawin/amawin.github.io/main/Amawin2026.png",
-      "description": "Amawin (Senithu Amawin) is a Sri Lankan rapper, singer-songwriter, and record producer born in 2007, active in the Sinhala rap scene.",
+      "description": "Amawin (Senithu Amawin) is a Sri Lankan rapper and record producer.",
       "birthDate": "2007-09-08",
-      "birthPlace": {
-        "@type": "Place",
-        "name": "Colombo, Sri Lanka"
-      },
       "jobTitle": ["Rapper", "Singer-songwriter", "Record producer"],
-      "knowsLanguage": ["Sinhala", "English"],
       "sameAs": [
-        "https://www.discogs.com/artist/17619450-Amawin",
         "https://www.youtube.com/@AmawinK9",
         "https://www.instagram.com/itz_amawin/",
         "https://open.spotify.com/artist/1sLhacB5MOAJOBptYh6mDj",
-        "https://musicbrainz.org/artist/4c07f9cf-e58a-4618-9d38-edfe69a516bc"
-      ],
-      "knowsAbout": ["Music Production", "Sri Lankan Rap", "Hip Hop", "Indian Pop"],
-      "nationality": {
-        "@type": "Country",
-        "name": "Sri Lanka"
-      }
+        "https://music.apple.com/lk/artist/amawin/1873246929",
+        "https://soundcloud.com/amawin-music",
+        "https://www.discogs.com/artist/17619450-Amawin"
+      ]
     }
     </script>
 </head>
 <body>
 
-    <!-- Loading Screen (0.5s) -->
-    <div id="loader">
-        <h1>AMAWIN</h1>
-    </div>
-
-    <!-- Main Content -->
-    <div id="main-content" style="display:none;">
-     
-        <section id="about">
-            <h2>About</h2>
-            <br>
-            <p>Amawin (Senithu Amawin) is an independent Sri Lankan rapper, singer-songwriter, and record producer specializing in authentic, narrative-driven hip-hop. Born in 2007, he has established a unique presence in the Sinhala rap scene by blending cinematic storytelling with high-quality music production.
-
-His creative process is defined by a hands-on approach, overseeing everything from complex lyrical compositions to the technicalities of full-scale music video production. Amawin is known for his preference for organic, acoustic-driven arrangements, consciously moving away from synthetic or regional drum patterns to create a signature sound that resonates with a global aesthetic.
-
-As a collaborator, he frequently works with artists like Wisher Scrappy and Morfyn, focusing on projects that push the boundaries of independent music in Sri Lanka. Beyond music, he manages his own digital identity and creative brand, including official merchandise and technical content creation.
-
-Currently distributed via Wave Park Music, Amawin continues to evolve as a versatile artist, merging independent hustle with professional industry standards.</p>
+    <main class="container">
+        <!-- Bio Section -->
+        <section id="bio">
+            <h1>Amawin</h1>
+            <p>Independent musician and record producer based in Sri Lanka. Born in 2007, his work focuses on the Sinhala rap scene, specifically exploring acoustic-driven arrangements and narrative songwriting. He manages the creative direction of his projects, from lyrical composition to music video production.</p>
         </section>
 
-        <section id="merch">
-            <h2>Merch Showcase</h2>
-            <br>
-            <div class="merch-grid">
-                <div class="merch-card">
-                    <img src="durgamerchblack.png" alt="Durga Black Tee">
-                    <p>DURGA - Limited Black Edition</p>
-                </div>
-                <div class="merch-card">
-                    <img src="durgamerchwhite.png" alt="Durga White Tee">
-                    <p>DURGA - Limited White Edition</p>
-                </div>
+        <!-- Music Section -->
+        <section id="music">
+            <h2>Music</h2>
+            <div class="spotify-grid">
+                <!-- Durga -->
+                <div class="embed-container">
+                    <iframe src="https://open.spotify.com/embed/track/YOUR_DURGA_ID" width="100%" height="152" frameBorder="0" allow="encrypted-media"></div>
+                <!-- Yadham -->
+                <div class="embed-container">
+                    <iframe src="https://open.spotify.com/embed/track/YOUR_YADHAM_ID" width="100%" height="152" frameBorder="0" allow="encrypted-media"></div>
+                <!-- IDK -->
+                <div class="embed-container">
+                    <iframe src="https://open.spotify.com/embed/track/YOUR_IDK_ID" width="100%" height="152" frameBorder="0" allow="encrypted-media"></div>
             </div>
         </section>
 
-        <!-- Social Links & Footer -->
-        <div class="social-links">
-            <a href="https://open.spotify.com/artist/1sLhacB5MOAJOBptYh6mDj" target="_blank"><i class="fab fa-spotify"></i></a>
-            <a href="https://music.apple.com/lk/artist/amawin/1873246929" target="_blank"><i class="fab fa-apple"></i></a>
-            <a href="https://www.youtube.com/@AmawinK9" target="_blank"><i class="fab fa-youtube"></i></a>
-            <a href="https://www.instagram.com/itz_amawin" target="_blank"><i class="fab fa-instagram"></i></a>
-            <a href="https://soundcloud.com/amawin-music" target="_blank"><i class="fab fa-soundcloud"></i></a>
-        </div>
+        <!-- Connect/Footer Section -->
+        <footer id="connect">
+            <div class="social-links">
+                <a href="https://open.spotify.com/artist/1sLhacB5MOAJOBptYh6mDj" target="_blank"><i class="fab fa-spotify"></i></a>
+                <a href="https://music.apple.com/lk/artist/amawin/1873246929" target="_blank"><i class="fab fa-apple"></i></a>
+                <a href="https://www.youtube.com/@AmawinK9" target="_blank"><i class="fab fa-youtube"></i></a>
+                <a href="https://www.instagram.com/itz_amawin" target="_blank"><i class="fab fa-instagram"></i></a>
+                <a href="https://soundcloud.com/amawin-music" target="_blank"><i class="fab fa-soundcloud"></i></a>
+            </div>
+            <p class="distro">Digital Distribution — <span>Wave Park Music</span></p>
+            <p class="copyright">© 2026 Amawin | All Rights Reserved.</p>
+        </footer>
+    </main>
 
-        <div style="text-align: center; margin-top: 20px; margin-bottom: 10px;">
-            <p style="font-size: 0.75rem; color: #888; letter-spacing: 1px; text-transform: uppercase; font-weight: 400;">
-                Digital Distribution — <span style="color: #d4af37; font-weight: 600;">Wave Park Music Group</span>
-            </p>
-        </div>
-
-        <footer>© 2026 Amawin | All Rights Reserved.</footer>
-    </div>
-
-    <script src="script.js"></script>
 </body>
 </html>
