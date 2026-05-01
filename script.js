@@ -1,24 +1,15 @@
-// News Slider Controller
-let currentNewsIdx = 0;
+window.addEventListener('load', function() {
+    // 0.5 seconds delay for AMAWIN loader
+    setTimeout(function() {
+        const loader = document.getElementById('loader');
+        const content = document.getElementById('main-content');
 
-function rotateNewsSlider() {
-    const slides = document.querySelectorAll('.news-slide');
-    if (slides.length > 0) {
-        // Hide all slides
-        slides.forEach(s => s.classList.remove('active'));
+        loader.style.transition = "opacity 0.3s ease";
+        loader.style.opacity = "0";
         
-        // Increment and show next slide
-        currentNewsIdx++;
-        if (currentNewsIdx > slides.length) { 
-            currentNewsIdx = 1; 
-        }
-        
-        slides[currentNewsIdx - 1].classList.add('active');
-        
-        // Repeat every 5 seconds
-        setTimeout(rotateNewsSlider, 5000);
-    }
-}
-
-// Start slider when window loads
-window.addEventListener('load', rotateNewsSlider);
+        setTimeout(() => {
+            loader.style.display = 'none';
+            content.style.display = 'block';
+        }, 300);
+    }, 500); 
+});
