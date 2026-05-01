@@ -45,12 +45,12 @@ section {
 }
 
 /* About Section Fix */
-#about {
+>#about {
     position: relative;
     background: rgba(255, 255, 255, 0.03); /* ලා frame එකක් */
     padding: 50px;
     border-radius: 15px;
-    text-align: left;
+    text-align: justify;
     margin-bottom: 50px;
 }
 
