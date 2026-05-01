@@ -17,54 +17,50 @@ body {
 
 section { margin-bottom: 50px; }
 
-h1 { font-size: 2.2rem; font-weight: 600; margin-bottom: 20px; color: #fff; }
-h2 { font-size: 1.1rem; text-transform: uppercase; letter-spacing: 3px; margin-bottom: 25px; color: #666; }
+/* About Section Centered with Highlighted Outline */
+#about {
+    text-align: center; /* අකුරු මැදට */
+    padding: 40px;
+    background: rgba(255, 255, 255, 0.02);
+    border-radius: 15px;
+    position: relative;
+    border: 1px solid rgba(212, 175, 55, 0.1); /* ඉතා ලා රන්වන් Outline එකක් */
+    transition: all 0.3s ease;
+}
 
-#bio p { font-size: 1rem; font-weight: 300; color: #bbb; text-align: left; }
+#about:hover {
+    border: 1px solid rgba(212, 175, 55, 0.3); /* Hover කරද්දී Highlight එක වැඩි වෙනවා */
+    background: rgba(255, 255, 255, 0.03);
+}
 
+h1 { font-size: 2.2rem; font-weight: 600; margin-bottom: 20px; color: #fff; text-align: center; }
+h2 { font-size: 1.1rem; text-transform: uppercase; letter-spacing: 3px; margin-bottom: 25px; color: #666; text-align: center; }
+
+#about p { font-size: 1rem; font-weight: 300; color: #bbb; }
+
+/* Music Section */
 .spotify-grid { display: flex; flex-direction: column; gap: 20px; }
 .embed-container { background: #111; border-radius: 12px; overflow: hidden; border: 1px solid #1a1a1a; }
 
+/* Footer Centered */
 footer {
     margin-top: 20px;
     padding-top: 30px;
     border-top: 1px solid #111;
-    text-align: center; /* සියලුම text මැදට ගනී */
+    text-align: center;
 }
 
 .social-links { 
     margin-bottom: 20px; 
     display: flex;
-    justify-content: center; /* Social icons මැදට ගනී */
-    flex-wrap: wrap;
-    gap: 25px; /* Icons අතර හිඩැස */
+    justify-content: center;
+    gap: 25px;
 }
 
-.social-links a { 
-    color: #555; 
-    font-size: 1.4rem; 
-    margin-right: 0; /* කලින් තිබුණු margin අයින් කළා center නිසා */
-    transition: 0.3s ease; 
-}
+.social-links a { color: #555; font-size: 1.4rem; transition: 0.3s ease; }
+.social-links a:hover { color: #fff; }
 
-.social-links a:hover { 
-    color: #fff; 
-}
+.distro { font-size: 0.75rem; color: #444; text-transform: uppercase; letter-spacing: 1px; }
+.distro span { color: #d4af37; font-weight: 600; }
 
-.distro { 
-    font-size: 0.75rem; 
-    color: #444; 
-    text-transform: uppercase; 
-    letter-spacing: 1px; 
-}
-
-.distro span { 
-    color: #d4af37; 
-    font-weight: 600; 
-}
-
-.copyright { 
-    font-size: 0.7rem; 
-    color: #222; 
-    margin-top: 8px; 
-}
+.copyright { font-size: 0.7rem; color: #222; margin-top: 8px; }
