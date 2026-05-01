@@ -39,18 +39,6 @@ section {
     text-align: center;
 }
 
-#hero {
-    height: 80vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('https://raw.githubusercontent.com/Amawin/amawin.github.io/main/Amawin2026.png');
-    background-size: cover;
-    background-position: center;
-}
-
-#hero h1 { font-size: 4rem; letter-spacing: 5px; }
-
 /* Merch */
 .merch-grid {
     display: grid;
