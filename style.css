@@ -6,6 +6,7 @@
 }
 
 body {
+    font-size: 15px; /* කලින් 16px වගේ තිබුණේ, මේක 15px කරාම සයිට් එකේ ලොකු ගතිය අඩුවෙනවා */
     background-color: #050505; /* ආයේ කළු කලා මචං */
     color: #ffffff;
     font-family: 'Poppins', sans-serif;
@@ -39,8 +40,8 @@ body {
 
 /* Section Containers */
 section {
-    padding: 80px 20px;
-    max-width: 1000px;
+    padding: 60px 20px;
+    max-width: 850px; /* කලින් 1000px තිබුණේ, මේක අඩු කරාම සයිට් එක මැදට වෙලා ලස්සනට පේනවා */
     margin: 0 auto;
 }
 
@@ -61,16 +62,14 @@ section {
 }
 
 #about p {
-    font-size: 1.1rem;
-    color: #ddd;
-    line-height: 1.8; /* අකුරු පැටලෙන්නේ නෑ දැන් */
-}
-
+    font-size: 0.95rem; /* අකුරු පොඩ්ඩක් කුඩා කරා */
+    line-height: 1.7;
 /* Merch Section Fix */
+    
 .merch-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 30px;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* 300px තිබුණ එක 250px කරා */
+    gap: 20px;
 }
 
 .merch-card {
