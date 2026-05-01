@@ -29,13 +29,42 @@ footer {
     margin-top: 20px;
     padding-top: 30px;
     border-top: 1px solid #111;
+    text-align: center; /* සියලුම text මැදට ගනී */
 }
 
-.social-links { margin-bottom: 20px; }
-.social-links a { color: #555; font-size: 1.4rem; margin-right: 25px; transition: 0.3s ease; }
-.social-links a:hover { color: #fff; }
+.social-links { 
+    margin-bottom: 20px; 
+    display: flex;
+    justify-content: center; /* Social icons මැදට ගනී */
+    flex-wrap: wrap;
+    gap: 25px; /* Icons අතර හිඩැස */
+}
 
-.distro { font-size: 0.75rem; color: #444; text-transform: uppercase; letter-spacing: 1px; }
-.distro span { color: #d4af37; font-weight: 600; }
+.social-links a { 
+    color: #555; 
+    font-size: 1.4rem; 
+    margin-right: 0; /* කලින් තිබුණු margin අයින් කළා center නිසා */
+    transition: 0.3s ease; 
+}
 
-.copyright { font-size: 0.7rem; color: #222; margin-top: 8px; }
+.social-links a:hover { 
+    color: #fff; 
+}
+
+.distro { 
+    font-size: 0.75rem; 
+    color: #444; 
+    text-transform: uppercase; 
+    letter-spacing: 1px; 
+}
+
+.distro span { 
+    color: #d4af37; 
+    font-weight: 600; 
+}
+
+.copyright { 
+    font-size: 0.7rem; 
+    color: #222; 
+    margin-top: 8px; 
+}
