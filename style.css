@@ -1,60 +1,5 @@
 * { margin: 0; padding: 0; box-sizing: border-box; }
 
-
-    <!-- Header Image එක සහ Spotify Font එක වෙනුවෙන් එකතු කල නව CSS ටික -->
-    <style>
-        .hero-header {
-            position: relative;
-            width: 100%;
-            height: 450px; /* ඉමේජ් එකේ උස */
-            /* උඹ දුන්න ඉමේජ් එකේ Raw Link එක මෙතනට දැම්මා මචං */
-            background-image: url('https://raw.githubusercontent.com/Amawin/amawin.github.io/main/Amawin%20header.png'); 
-            background-size: cover;
-            background-position: center;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            border-radius: 12px;
-            overflow: hidden;
-            margin-bottom: 30px;
-        }
-
-        /* ෆොටෝ එක උඩින් අකුරු පැහැදිලිව පෙනෙන්න දාන ඩාර්ක් ලේයර් එක */
-        .hero-overlay {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: rgba(0, 0, 0, 0.45); /* 45% ක් ෆොටෝ එක කළු කරනවා */
-            z-index: 1;
-        }
-
-        /* Spotify Style Title එක */
-        .hero-title {
-            font-family: 'Montserrat', sans-serif;
-            font-weight: 800; /* පට්ට Bold */
-            font-size: 4.5rem; /* අකුරු වල ප්‍රමාණය */
-            color: #ffffff;
-            text-transform: capitalize;
-            letter-spacing: -2.5px; /* Spotify එකේ වගේ අකුරු ලං කරලා තියෙන්නේ */
-            z-index: 2;
-            position: relative;
-            text-shadow: 0 4px 15px rgba(0,0,0,0.6);
-        }
-
-        /* Mobile Screen වලට Responsive වෙන්න හදපු කොටස */
-        @media (max-width: 768px) {
-            .hero-header {
-                height: 280px;
-            }
-            .hero-title {
-                font-size: 2.8rem;
-                letter-spacing: -1.5px;
-            }
-        }
-    </style>
-
 body {
     background-color: #050505;
     color: #e0e0e0;
@@ -117,5 +62,57 @@ footer {
 
 .distro { font-size: 0.75rem; color: #444; text-transform: uppercase; letter-spacing: 1px; }
 .distro span { color: #d4af37; font-weight: 600; }
+
+ <!-- Header Image එක සහ Spotify Font එක වෙනුවෙන් එකතු කල නව CSS ටික -->
+        .hero-header {
+            position: relative;
+            width: 100%;
+            height: 450px; /* ඉමේජ් එකේ උස */
+            /* උඹ දුන්න ඉමේජ් එකේ Raw Link එක මෙතනට දැම්මා මචං */
+            background-image: url('https://raw.githubusercontent.com/Amawin/amawin.github.io/main/Amawin%20header.png'); 
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 12px;
+            overflow: hidden;
+            margin-bottom: 30px;
+        }
+
+        /* ෆොටෝ එක උඩින් අකුරු පැහැදිලිව පෙනෙන්න දාන ඩාර්ක් ලේයර් එක */
+        .hero-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.45); /* 45% ක් ෆොටෝ එක කළු කරනවා */
+            z-index: 1;
+        }
+
+        /* Spotify Style Title එක */
+        .hero-title {
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 800; /* පට්ට Bold */
+            font-size: 4.5rem; /* අකුරු වල ප්‍රමාණය */
+            color: #ffffff;
+            text-transform: capitalize;
+            letter-spacing: -2.5px; /* Spotify එකේ වගේ අකුරු ලං කරලා තියෙන්නේ */
+            z-index: 2;
+            position: relative;
+            text-shadow: 0 4px 15px rgba(0,0,0,0.6);
+        }
+
+        /* Mobile Screen වලට Responsive වෙන්න හදපු කොටස */
+        @media (max-width: 768px) {
+            .hero-header {
+                height: 280px;
+            }
+            .hero-title {
+                font-size: 2.8rem;
+                letter-spacing: -1.5px;
+            }
+        }
 
 .copyright { font-size: 0.7rem; color: #222; margin-top: 8px; }
