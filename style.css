@@ -11,8 +11,10 @@ body {
 }
 
 .container {
-    max-width: 650px;
-    width: 100%;
+    width: 90%;
+    max-width: 1000px; /* කලින් මේක පට්ටම අඩු කරලා තිබ්බ නිසා තමයි හිරවෙලා තිබ්බේ. දැන් 1000px කලා */
+    margin: 0 auto;    /* සයිට් එක screen එකේ මැදට ගන්න */
+    padding: 20px;
 }
 
 section { margin-bottom: 50px; }
@@ -76,11 +78,11 @@ footer {
 
 .copyright { font-size: 0.7rem; color: #222; margin-top: 8px; }
 
-/* --- Amawin Header Image Styles --- */
+/* --- Amawin Header Image Styles (Responsive) --- */
 .amawin-hero-header {
     position: relative;
     width: 100%;
-    height: 400px; /* හෙඩර් එකේ උස */
+    height: 450px; /* ඩෙස්ක්ටොප් එකේදී උස */
     background-image: url('https://raw.githubusercontent.com/Amawin/amawin.github.io/main/Amawin%20header.png');
     background-size: cover;
     background-position: center;
@@ -92,25 +94,23 @@ footer {
     margin-bottom: 30px;
 }
 
-/* ෆොටෝ එක උඩින් අකුරු පැහැදිලිව පෙනෙන්න දාන ඩාර්ක් ලේයර් එක */
 .amawin-hero-overlay {
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(0, 0, 0, 0.45); /* 45% ක් ෆොටෝ එක ඩාර්ක් කරයි */
+    background: rgba(0, 0, 0, 0.45);
     z-index: 1;
 }
 
-/* --- Spotify Style Title Styles --- */
 .amawin-hero-title {
-    font-family: 'Inter', sans-serif; /* සයිට් එකේ දැනටමත් තියෙන font එකම ගත්තා */
-    font-weight: 800; /* පට්ට Bold */
-    font-size: 4.5rem; /* අකුරු වල සයිස් එක */
+    font-family: 'Inter', sans-serif;
+    font-weight: 800;
+    font-size: 5rem; /* ඩෙස්ක්ටොප් එකේදී නම ලොකුවට පෙනෙන්න */
     color: #ffffff;
     text-transform: capitalize;
-    letter-spacing: -3px; /* Spotify එකේ වගේ අකුරු ලං කරලා තියෙන්නේ */
+    letter-spacing: -3px;
     margin: 0;
     padding: 0;
     z-index: 2;
@@ -118,13 +118,17 @@ footer {
     text-shadow: 0 4px 15px rgba(0, 0, 0, 0.6);
 }
 
-/* Mobile Screen වලට ගැලපෙන්න Responsive කරපු කොටස */
+/* --- මෙන්න මේකෙන් තමයි ෆෝන් එකෙන් බලද්දී විතරක් සයිට් එක මොබයිල් වීව් එකට හරවන්නේ --- */
 @media (max-width: 768px) {
+    .container {
+        width: 95%;
+        padding: 10px;
+    }
     .amawin-hero-header {
-        height: 250px; /* මොබයිල් ෆෝන් වලට උස අඩු කලා */
+        height: 250px; /* ෆෝන් එකේදී හෙඩර් එකේ උස අඩු වෙනවා */
     }
     .amawin-hero-title {
-        font-size: 2.8rem;
+        font-size: 2.8rem; /* ෆෝන් එකේදී අකුරු කුඩා වෙනවා */
         letter-spacing: -1.5px;
     }
 }
